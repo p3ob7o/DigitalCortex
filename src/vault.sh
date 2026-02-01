@@ -4,7 +4,10 @@
 # Implements F01: Vault Structure & Scaffolding
 # See requirements/F01-vault-structure.md for specifications.
 
-set -euo pipefail
+# Enable strict mode only when executed directly, not when sourced
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    set -euo pipefail
+fi
 
 # =============================================================================
 # Constants
