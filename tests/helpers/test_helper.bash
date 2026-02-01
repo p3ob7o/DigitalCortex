@@ -5,7 +5,7 @@
 export SRC_DIR="${BATS_TEST_DIRNAME}/../../src"
 
 # Test directories
-export TEST_FIXTURES_DIR="${BATS_TEST_DIRNAME}/../fixtures"
+export TEST_FIXTURES_DIR="${BATS_TEST_DIRNAME}/fixtures"
 export TEST_VAULT_POPULATED="${TEST_FIXTURES_DIR}/test-vault-populated"
 export TEST_TEMP_DIR=""
 
