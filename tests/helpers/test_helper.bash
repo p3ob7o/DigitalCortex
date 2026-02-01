@@ -48,7 +48,16 @@ export EXPECTED_META_FILES=(
 
 # Create a clean temporary test vault directory
 setup_test_vault() {
-    TEST_TEMP_DIR=$(mktemp -d)
+    local tmp_dir
+
+    # Try GNU-style mktemp first; fall back to BSD/macOS -t form if needed
+    if tmp_dir="$(mktemp -d 2>/dev/null)"; then
+        :
+    else
+        tmp_dir="$(mktemp -d -t dc_vault_test.XXXXXX)"
+    fi
+
+    TEST_TEMP_DIR="$tmp_dir"
     export TEST_TEMP_DIR
 }
 
