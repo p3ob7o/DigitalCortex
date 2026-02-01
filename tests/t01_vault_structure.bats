@@ -147,7 +147,7 @@ teardown() {
         name=$(basename "$dir")
         [[ "$name" == .* ]] && continue  # Skip hidden folders
         folders+=("$name")
-    done < <(find "$TEST_TEMP_DIR" -maxdepth 1 -type d -print0 | sort -z)
+    done < <(find "$TEST_TEMP_DIR" -mindepth 1 -maxdepth 1 -type d -print0 | sort -z)
 
     # Verify all numbered folders match pattern ^[0-9]_[A-Za-z]+$
     for folder in "${folders[@]}"; do
