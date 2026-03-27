@@ -1,0 +1,28 @@
+# Digital Cortex Configuration
+
+vault:
+  name: "Test Vault"
+  timezone: "America/New_York"
+
+sources:
+  gmail:
+    enabled: false
+  calendar:
+    enabled: false
+  slack:
+    enabled: false
+  p2:
+    enabled: false
+  linear:
+    enabled: false
+  reminders:
+    enabled: false
+
+features:
+  morning_brief:
+    enabled: true
+    auto_run: false
+  evening_review:
+    enabled: true
+  weekly_review:
+    enabled: true

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "last_sync": {
+    "gmail": null,
+    "calendar": null,
+    "slack": null,
+    "p2": null,
+    "linear": null,
+    "reminders": null
+  },
+  "last_morning_brief": null,
+  "last_evening_review": null,
+  "last_weekly_review": null
+}
